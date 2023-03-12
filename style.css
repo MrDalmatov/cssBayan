@@ -46,6 +46,15 @@ body {
   align-items: center;
 }
 
+.close-icon {
+  background-image: url(./images/plus.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+}
+
 .meme-title {
   font-size: 1.6rem;
 }
@@ -65,8 +74,26 @@ body {
   opacity: 1;
 }
 
+.meme-accordeon:focus .meme-image {
+  width: 70%;
+  visibility: visible;
+  opacity: 1;
+}
+
 .meme-accordeon:hover {
   cursor: pointer;
+}
+
+.memes-wrapper:hover .close-icon {
+  opacity: 1;
+}
+
+.meme-accordeon:hover .close-icon {
+  background-image: url(./images/x.svg);
+}
+
+.meme-accordeon:focus .close-icon {
+  background-image: url(./images/x.svg);
 }
 
 input {
