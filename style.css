@@ -88,6 +88,10 @@ body {
   opacity: 1;
 }
 
+.memes-wrapper:hover .meme-title {
+  color: #1f1e4a;
+}
+
 .meme-accordeon:hover .close-icon {
   background-image: url(./images/x.svg);
 }
@@ -100,4 +104,36 @@ input {
   width: 0;
   height: 0;
   opacity: 0;
+}
+
+input:focus + .meme-accordeon .meme-image {
+  visibility: visible;
+  opacity: 1;
+  width: 70%;
+}
+
+
+@media screen and (min-width: 820px) {
+  .meme-title {
+    font-size: 3rem;
+  }
+  .close-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .main-title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .meme-title {
+    font-size: 3.6rem;
+  }
+  .close-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .main-title {
+    font-size: 5rem;
+  }
 }
