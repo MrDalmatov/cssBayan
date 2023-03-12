@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Rampart One', cursive;
+}
+
+.container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.memes-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-title {
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1rem;
+}
+
+.meme-accordeon {
+  background-color: #9c9c9c;
+  padding: 1rem;
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.meme-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-icon {
+  background-image: url(./images/plus.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+}
+
+.meme-title {
+  font-size: 1.6rem;
+}
+
+.meme-image {
+  align-self: center;
+  padding: 0.5rem;
+  visibility: hidden;
+  transition: .9s;
+  opacity: 0;
+  width: 0;
+}
+
+.meme-accordeon:hover .meme-image {
+  width: 70%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.meme-accordeon:focus .meme-image {
+  width: 70%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.meme-accordeon:hover {
+  cursor: pointer;
+}
+
+.memes-wrapper:hover .close-icon {
+  opacity: 1;
+}
+
+.memes-wrapper:hover .meme-title {
+  color: #1f1e4a;
+}
+
+.meme-accordeon:hover .close-icon {
+  background-image: url(./images/x.svg);
+}
+
+.meme-accordeon:focus .close-icon {
+  background-image: url(./images/x.svg);
+}
+
+input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+input:focus + .meme-accordeon .meme-image {
+  visibility: visible;
+  opacity: 1;
+  width: 70%;
+}
+
+@media screen and (min-width: 820px) {
+  .meme-title {
+    font-size: 3rem;
+  }
+  .close-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  .main-title {
+    font-size: 3.5rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .meme-title {
+    font-size: 3.6rem;
+  }
+  .close-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .main-title {
+    font-size: 5rem;
+  }
+}
