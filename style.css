@@ -124,4 +124,15 @@ input:focus + .meme-accordeon .meme-image {
     font-size: 3.5rem;
   }
 }
-
+@media screen and (min-width: 1000px) {
+  .meme-title {
+    font-size: 3.6rem;
+  }
+  .close-icon {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+  .main-title {
+    font-size: 5rem;
+  }
+}
